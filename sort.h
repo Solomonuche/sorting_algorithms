@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -25,5 +26,10 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 
+/** quicksort */
+int lomutoPartition(int *array, int low, int high);
+void swapFunction(int *n1, int *n2);
+void quicksort(int *array, int low, int high, size_t size);
+void quick_sort(int *array, size_t size);
 
 #endif
