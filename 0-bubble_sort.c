@@ -11,7 +11,7 @@
 void bubble_sort(int *array, size_t size)
 {
 	size_t i, j = 0;
-	int tmp, flag;
+	int tmp;
 
 	if (size < 2)
 		exit(EXIT_SUCCESS);
@@ -26,7 +26,6 @@ void bubble_sort(int *array, size_t size)
 				array[i] = array[i + 1];
 				array[i + 1] = tmp;
 				print_array(array, size);
-				flag = 1;
 			}
 		}
 		j++;
