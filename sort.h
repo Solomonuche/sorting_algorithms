@@ -35,4 +35,6 @@ void quick_sort(int *array, size_t size);
 /** Shell sort */
 void shell_sort(int *array, size_t size);
 
+void counting_sort(int *array, size_t size);
+
 #endif
