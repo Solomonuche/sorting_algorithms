@@ -24,6 +24,7 @@ void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
 void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
+void swap_nodes(listint_t **list, listint_t *current, listint_t *last);
 void selection_sort(int *array, size_t size);
 
 /** quicksort */
@@ -36,5 +37,10 @@ void quick_sort(int *array, size_t size);
 void shell_sort(int *array, size_t size);
 
 void counting_sort(int *array, size_t size);
+
+void merge_sort(int *array, size_t size);
+void merge(int *array, int low, int mid, int high);
+void mergesort_helper(int *array, int low, int high);
+void print_myarray(int *array, int start, int end);
 
 #endif
