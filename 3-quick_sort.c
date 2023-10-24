@@ -71,6 +71,7 @@ void swapFunction(int *n1, int *n2)
  * @array: the array to be sorted
  * @low: first index in the array
  * @high: highest index in the array
+ * @size: array size
  *
  * Return: (i)
  */
