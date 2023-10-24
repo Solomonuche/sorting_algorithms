@@ -39,8 +39,7 @@ void quicksort(int *array, int low, int high, size_t size)
 
 	if (low < high)
 	{
-		index = lomutoPartition(array, low, high);
-		print_array(array, size);
+		index = lomutoPartition(array, low, high, size);
 
 		quicksort(array, low, index - 1, size);
 
@@ -51,6 +50,7 @@ void quicksort(int *array, int low, int high, size_t size)
 
 /**
  * swapFunction - A function that swaps the position of
+ *
  * two element in a list
  * @n1: first element
  * @n2: second element
@@ -75,7 +75,7 @@ void swapFunction(int *n1, int *n2)
  * Return: (i)
  */
 
-int lomutoPartition(int *array, int low, int high)
+int lomutoPartition(int *array, int low, int high, size_t size)
 {
 	int i, j;
 	int pivot;
@@ -89,9 +89,14 @@ int lomutoPartition(int *array, int low, int high)
 		{
 			i++;
 			swapFunction(&array[i], &array[j]);
+			if (array[j] != array[i])
+				print_array(array, size);
 		}
 	}
-	swapFunction(&array[i + 1], &array[high]);
+	i++;
+	swapFunction(&array[i], &array[high]);
+	if (array[j] != array[i])
+		print_array(array, size);
 
-	return (i + 1);
+	return (i);
 }
